@@ -1,0 +1,14 @@
+## Abstract Classes and Interfaces - Exercise VI - OOP Calculator
+
+* Lets revisit the calculator that we created in Exercise III
+* This time we allow the implementation of arbitrary arithmetic operations using the ```ArithmeticOperation``` interface
+* We also want to provide an **abstract** default implementation, ```DefaultArithmeticOperation``` for the ```ArithmeticOperation``` **interface**
+* We will also create an **abstract** ```BaseCalculator``` that contains the parsing logic (```parseInt```) as well as all supported ```ArithmeticOperations``` and a concrete ```Calculator``` that reads commands from the command line. This way, we can create different concrete calculators at a later point without having to implement the parsing logic again
+
+## Abstract Classes and Interfaces - Exercise VI - OOP Calculator cont.
+
+* ```ArithmeticOperation``` contains:
+  * the method ```getOperandCount``` that returns the number of required operands
+  * the method ```getTrigger``` which returns the trigger word (like "add", "subtract", etc) for the operation
+  * the method ```operandsValid``` which checks if all provided operands are valid
+* We will also implement ```SquareRootOperation``` and ```DivisionOperation```
