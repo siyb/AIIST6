@@ -15,4 +15,9 @@ public class SquareRootOperation extends DefaultArithmeticOperation implements A
     public Double calculate(Double[] operands) {
         return Math.sqrt(operands[0]);
     }
+
+    @Override
+    public boolean operandsValid(Double[] operands) {
+        return super.operandsValid(operands) && operands[0] >= 0;
+    }
 }
