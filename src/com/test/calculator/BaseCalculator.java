@@ -11,6 +11,17 @@ public abstract class BaseCalculator {
         arithmeticOperations.add(a);
     }
 
+    public abstract void start();
+
+    protected ArithmeticOperation getArithmeticOperationByCommand(String command) {
+        for (ArithmeticOperation o : arithmeticOperations) {
+            if (o.getTrigger().equals(command)) {
+                return o;
+            }
+        }
+        return null;
+    }
+
     protected Double[] parseOperands(String[] stringOperands) {
         return Arrays.stream(stringOperands)
                 .map(s -> Double.parseDouble(s))
